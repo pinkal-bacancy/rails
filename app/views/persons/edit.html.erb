@@ -1,0 +1,25 @@
+<h1>Persons#edit</h1>
+<p>Find me in app/views/persons/edit.html.erb</p>
+<%= form_for @person,url: {action: "update"} do |form| %>
+<p>
+    <%= form.label :title %><br>
+    <%= form.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= form.label :dob %><br>
+    <%= form.text_area :dob %>
+  </p>
+ 
+ <p>
+    <%= form.label :city %><br>
+    <%= form.text_area :city %>
+  </p>
+  <p>
+    <%= form.label :role %><br>
+    <%= form.text_area :role %>
+  </p>
+  <p>
+    <%= form.submit %>
+  </p>
+<%end%>

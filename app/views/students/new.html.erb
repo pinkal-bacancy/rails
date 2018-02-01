@@ -1,0 +1,26 @@
+<%= form_tag ({controller: "students", action: "create"}) do%>
+  <%= label_tag(:name)%>
+  <%= text_field_tag(:name)%><br>
+   <%= label_tag(:dob)%>
+   <%= date_field(:students,:dob) %><br>
+    <%= label_tag(:email)%>
+   <%= email_field(:students,:email) %><br>
+   <%= label_tag(:phone)%>
+   <%= telephone_field(:students, :phone) %><br>
+   
+<input id="age_child" name="gender" type="radio" value="child" />
+<label for="age_child">I am younger than 21</label>
+<input id="age_adult" name="gender" type="radio" value="adult" />
+<label for="age_adult">I'm over 21</label>
+<% depart_array = Department.all.map { |i| [i.department_name, i.id] } %>
+<%= options_for_select(depart_array) %>
+
+ <%= label_tag(:password)%>
+<%= password_field_tag(:password) %><br>
+<%= label_tag(:password)%>
+
+    <%= label_tag :Confirm_Password %><br>
+    <%= password_field_tag(:password_confirmation) %>
+ 
+   <%= submit_tag %>
+<%end%>

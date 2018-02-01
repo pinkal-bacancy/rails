@@ -1,0 +1,17 @@
+
+<%= link_to "new person", new_person_path%>
+<%= form_for @person,url: {action: "create"} do |f| %>
+<%= f.label :Name%>
+ <%= f.text_field :name %><br>
+ <%= f.label :Dob%>
+ <%=date_field("person", "dob")%><br>
+ <%= f.label :city%>
+ <%= f.select :city, ['Ahmedabad', 'vadodara']%><br>
+ <%= f.label :Role %><br />
+    <%= f.label :student, "student", :value => "student"  %>
+    <%= f.radio_button :role, "student"%>
+    <%= f.label :teacher, "teacher", :value => "teacher" %>
+    <%= f.radio_button :role, "teacher", :checked => true %>
+ <%= f.submit %>
+<%end%>
+<%= link_to "all person", persons_path%>

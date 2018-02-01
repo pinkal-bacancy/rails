@@ -1,0 +1,8 @@
+
+<%= form_tag ({controller: "departments", action: "create"}) do%>
+<%= label_tag(:department_name)%>
+  <%= text_field_tag(:department_name)%><br>
+<%= label_tag(:block_no)%>
+  <%= text_field_tag(:block)%><br>
+  <%= submit_tag "add department"%>
+  <%end%>
