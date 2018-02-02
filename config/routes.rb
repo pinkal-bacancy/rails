@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root_to "students#new"
+  root to:  "students#new"
   get 'departments/new'
 
   get 'departments/index'
